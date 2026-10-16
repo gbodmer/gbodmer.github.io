@@ -131,13 +131,18 @@ div.row + div.row summary { border-top: .5px solid var(--sep); }
 .lbl { font-size: 13px; color: var(--label2); line-height: 1.3; }
 
 /* ---------- Project cards ---------- */
-.cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+.cards { columns: 2; column-gap: 12px; }
+.cards .card { break-inside: avoid; margin-bottom: 12px; }
 .card { position: relative; background: var(--card); border-radius: 16px; box-shadow: var(--shadow); padding: 16px 18px; display: flex; flex-direction: column; gap: 6px; }
 .card h3 { font-size: 19px; letter-spacing: -0.02em; }
 .card p { margin: 0; font-size: 15px; color: var(--label2); }
 .grade { position: absolute; top: 14px; right: 14px; min-width: 40px; text-align: center; font-size: 13px; font-weight: 700; font-variant-numeric: tabular-nums; color: #fff; background: var(--blue); padding: 3px 9px; border-radius: 999px; }
 .grade::before { content: "Grade "; font-weight: 500; opacity: .85; }
 .tag { align-self: flex-start; font-size: 12px; font-weight: 600; color: var(--c); background: color-mix(in srgb, var(--c) 14%, transparent); padding: 3px 9px; border-radius: 999px; }
+
+.media { margin: -16px -18px 8px; aspect-ratio: 16 / 10; overflow: hidden; border-radius: 16px 16px 0 0; background: var(--fill); }
+.media img, .media video { width: 100%; height: 100%; object-fit: cover; display: block; }
+.has-media .grade { z-index: 2; box-shadow: 0 2px 8px rgba(0, 0, 0, .35); }
 
 /* chips (skills, tools) */
 .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto !important; padding-top: 6px; }
@@ -175,7 +180,7 @@ footer { text-align: center; color: var(--label3); font-size: 13px; padding: 40p
   .topbar nav { display: none; }
   .topbar { justify-content: center; }
   .stats { grid-template-columns: repeat(2, 1fr); }
-  .cards { grid-template-columns: 1fr; }
+  .cards { columns: 1; }
   .profile { padding-top: 28px; }
   .tabbar {
     display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 20;

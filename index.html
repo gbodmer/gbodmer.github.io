@@ -55,7 +55,7 @@
     </div>
 
     <div class="stats">
-      <div class="stat"><span class="num" style="--c:var(--blue)">12</span><span class="lbl">Engineering projects</span></div>
+      <div class="stat"><span class="num" style="--c:var(--blue)">13</span><span class="lbl">Engineering projects</span></div>
       <div class="stat"><span class="num" style="--c:#34c759">3</span><span class="lbl">Languages</span></div>
       <div class="stat"><span class="num" style="--c:#ff9500">2022</span><span class="lbl">At ETH Zürich since</span></div>
       <div class="stat"><span class="num" style="--c:#ff2d55">8</span><span class="lbl">Age of my first build</span></div>
@@ -116,7 +116,8 @@
   <section id="projects">
     <h2 class="group-title">Projects</h2>
     <div class="cards">
-      <article class="card">
+      <article class="card has-media">
+        <figure class="media"><img src="media/bioprinting.jpg" alt="3D-printed passive mixing nozzle for bioprinting" loading="lazy" decoding="async"></figure>
         <span class="tag" style="--c:#af52de">Semester thesis · 2026</span>
         <h3>Cartilage bioprinting</h3><span class="grade" title="ETH grade (scale 1–6, 6 = best)">5.75</span>
         <p>Developed a heatable passive mixing nozzle for in-situ bioprinting of cartilage at the Ingenuity Lab, formulated several bioinks and validated them against native tissue.</p>
@@ -128,13 +129,15 @@
         <p>Investigated and validated computer-vision tracking systems that analyse human movement without physical markers, at the Sensory-Motor Systems Lab.</p>
         <p class="chips"><i>Computer vision</i><i>Biomechanics</i><i>Python</i></p>
       </article>
-      <article class="card">
+      <article class="card has-media">
+        <figure class="media"><video src="media/rl-biped.mp4" poster="media/rl-biped.jpg" muted loop playsinline preload="none" aria-label="Six simulated biped robots walking with the learned policy in MuJoCo"></video></figure>
         <span class="tag" style="--c:#ff3b30">Robot learning · 2026</span>
         <h3>Deep RL for a walking biped</h3><span class="grade" title="ETH grade (scale 1–6, 6 = best)">5.5</span>
         <p>Trained a 12-DoF biped robot with PPO in Isaac Gym to imitate a walking motion: reward design, phase variable, deployment-ready observations and domain randomisation (friction, mass, pushes), then transferred the policy Sim2Sim to MuJoCo.</p>
         <p class="chips"><i>RL · PPO</i><i>Isaac Gym</i><i>MuJoCo</i><i>Sim2Sim</i></p>
       </article>
-      <article class="card">
+      <article class="card has-media">
+        <figure class="media"><video src="media/backflip.mp4" poster="media/backflip.jpg" muted loop playsinline preload="none" aria-label="Simulated biped robot doing a backflip from trajectory optimisation"></video></figure>
         <span class="tag" style="--c:#5ac8fa">Legged robots · 2026</span>
         <h3>Locomotion &amp; trajectory optimisation</h3><span class="grade" title="ETH grade (scale 1–6, 6 = best)">5.5</span>
         <p>Kinematic walking controllers for quadruped and hexapod robots (trajectory planning and inverse kinematics), and trajectory optimisation for a biped from inverted-pendulum to single-rigid-body models, walking and jumping.</p>
@@ -153,6 +156,13 @@
         <p class="chips"><i>Biosignals</i><i>Python</i><i>Neural networks</i></p>
       </article>
       <article class="card">
+        <span class="tag" style="--c:#bf5af2">Medical technology · MSc</span>
+        <h3>Soft-robotic speculum</h3><span class="grade" title="ETH grade (scale 1–6, 6 = best)">6.0</span>
+        <p>Team project redesigning today's gynaecological speculum with soft robotics: a design that expands gently using pneumatic pressure, aimed at patient groups that are underrepresented in medical device design.</p>
+        <p class="chips"><i>Soft robotics</i><i>Pneumatic actuation</i><i>Medical device design</i><i>Teamwork</i></p>
+      </article>
+      <article class="card has-media">
+        <figure class="media"><img src="media/seeder.jpg" alt="Annotated concept sketch of the precision seeder" loading="lazy" decoding="async"></figure>
         <span class="tag" style="--c:#34c759">Product development · 2025</span>
         <h3>Precision seeder</h3><span class="grade" title="ETH grade (scale 1–6, 6 = best)">5.25</span>
         <p>Designed and built a robust, low-cost precision seeder for low-infrastructure regions, using off-the-shelf parts for easy maintenance.</p>
@@ -164,7 +174,8 @@
         <p>Optimised a thermoplastic carbon-fibre aircraft wing spar for weight and bending load to failure, then manufactured it and tested it to destruction.</p>
         <p class="chips"><i>FEM</i><i>Composites</i><i>Testing</i></p>
       </article>
-      <article class="card">
+      <article class="card has-media">
+        <figure class="media"><img src="media/ratchet.jpg" alt="CAD model of the high-precision ratchet mechanism" loading="lazy" decoding="async"></figure>
         <span class="tag" style="--c:#ff2d55">CAD lab · 2024</span>
         <h3>High-precision ratchet</h3><span class="grade" title="ETH grade (scale 1–6, 6 = best)">5.75</span>
         <p>Designed and validated a ratcheting wrench with a smaller swing angle than market standards.</p>
@@ -182,7 +193,8 @@
         <p>Built a React web app as an interactive study guide for the Computational Models of Motion course, covering lectures from kinematics to reinforcement learning.</p>
         <p class="chips"><i>React</i><i>Vite</i><i>JavaScript</i></p>
       </article>
-      <article class="card">
+      <article class="card has-media">
+        <figure class="media"><video src="media/sorting-robot.mp4" poster="media/sorting-robot.jpg" muted loop playsinline preload="none" aria-label="Autonomous sorting robot following its line track"></video></figure>
         <span class="tag" style="--c:#a2845e">Innovation project · 2022–23</span>
         <h3>Autonomous sorting robot</h3>
         <p>Built and programmed an autonomous line-following “garbage truck” that identifies and sorts waste.</p>
@@ -268,6 +280,9 @@
     tabs.forEach(t => t.classList.toggle('on', t.getAttribute('href') === '#' + e.target.id));
   }), { rootMargin: '-45% 0px -50% 0px' });
   document.querySelectorAll('main > section[id], main#top').forEach(s => io.observe(s));
+  // project videos: load and play only while on screen
+  const vo = new IntersectionObserver(es => es.forEach(e => e.isIntersecting ? e.target.play().catch(() => {}) : e.target.pause()), { threshold: .4 });
+  document.querySelectorAll('.media video').forEach(v => vo.observe(v));
 </script>
 </body>
 </html>
