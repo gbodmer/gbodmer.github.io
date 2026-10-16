@@ -170,6 +170,14 @@ div.row + div.row summary { border-top: .5px solid var(--sep); }
 .highlight.rc p { color: #ffffffd9; }
 .highlight.rc .tag { --c: #ffffff; }
 
+/* ---------- About + contact ---------- */
+.about .hello { font-size: 22px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 8px !important; }
+.cta { text-align: center; margin-top: 40px; padding: 28px 22px !important; }
+.cta h2 { font-size: 24px; margin: 0 0 8px; letter-spacing: -0.02em; }
+.cta p { color: var(--label2); margin: 0 auto 18px !important; max-width: 460px; }
+.btn-cta { display: inline-block; background: var(--blue); color: #fff; font-weight: 600; padding: 12px 22px; border-radius: 999px; transition: transform .15s; }
+.btn-cta:active { transform: scale(.97); }
+
 /* ---------- Footer ---------- */
 footer { text-align: center; color: var(--label3); font-size: 13px; padding: 40px 0 0; }
 
