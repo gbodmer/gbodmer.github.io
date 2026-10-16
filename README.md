@@ -2,7 +2,7 @@
 
 Personal website of Guy Bodmer, built with plain HTML and CSS and hosted on GitHub Pages.
 
-Live at: https://gbodmer.github.io
+Live at: https://guybodmer.com (also https://gbodmer.github.io)
 
 ## Editing
 
