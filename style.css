@@ -29,12 +29,40 @@
   }
 }
 
+/* ---------- Background: soft iOS-style wallpaper (pure CSS, fixed) ---------- */
+:root {
+  --glow0: rgba(90, 120, 255, .14);  /* soft halo behind the profile */
+  --glow1: rgba(0, 122, 255, .16);   /* blue */
+  --glow2: rgba(175, 82, 222, .13);  /* purple */
+  --glow3: rgba(48, 209, 205, .14);  /* teal */
+  --glow4: rgba(255, 149, 0, .08);   /* warm accent */
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --glow0: rgba(94, 92, 230, .30);
+    --glow1: rgba(10, 132, 255, .34);
+    --glow2: rgba(191, 90, 242, .26);
+    --glow3: rgba(64, 200, 224, .18);
+    --glow4: rgba(255, 159, 10, .10);
+  }
+}
+body::before {
+  content: ""; position: fixed; inset: -10vmax; z-index: -1; pointer-events: none;
+  background:
+    radial-gradient(34vmax 26vmax at 50% 6%, var(--glow0), transparent 72%),
+    radial-gradient(40vmax 40vmax at 12% 8%, var(--glow1), transparent 70%),
+    radial-gradient(38vmax 38vmax at 88% 18%, var(--glow2), transparent 70%),
+    radial-gradient(45vmax 45vmax at 70% 92%, var(--glow3), transparent 70%),
+    radial-gradient(30vmax 30vmax at 8% 85%, var(--glow4), transparent 70%),
+    var(--bg);
+}
+
 /* ---------- Base ---------- */
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; background: var(--bg); }
 body {
   margin: 0;
-  background: var(--bg);
+  background: transparent;
   color: var(--label);
   font: 17px/1.47 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
