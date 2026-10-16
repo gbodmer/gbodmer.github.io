@@ -51,7 +51,7 @@
   <section id="about">
     <h2 class="group-title">About</h2>
     <div class="group pad">
-      <p>Mechanical engineer from ETH Zürich, focused on <b>robotics</b> and <b>biomedical engineering</b>. I like the part where theory meets the workshop: from carbon-fibre wing spars and precision mechanisms to bioprinting nozzles and computer-vision motion tracking.</p>
+      <p>Mechanical engineer from ETH Zürich, focused on <b>robotics</b> and <b>biomedical engineering</b>. I like the part where theory meets the workshop: from carbon-fibre wing spars and precision mechanisms to bioprinting nozzles, and from cost-function-based trajectory optimisation to training walking robots with reinforcement learning in MuJoCo and Isaac Gym.</p>
       <p>Today I work at <b>Voliro</b>, an ETH spin-off building aerial robots that inspect industrial infrastructure by touching it. Outside work I'm usually on a road bike or training for the next long run.</p>
     </div>
 
@@ -91,7 +91,7 @@
       <details class="row" open>
         <summary><span class="sq" style="--c:#1f407a">ETH</span><span class="txt"><b>MSc Mechanical Engineering</b><small>ETH Zürich · Robotics &amp; Biomedical Engineering</small></span><span class="val">Since 2025</span></summary>
         <ul>
-          <li>Computational Models of Motion · Planning &amp; Decision Making for Autonomous Robots · Mobile Health Monitoring</li>
+          <li>Computational Models of Motion (legged locomotion, trajectory optimisation, deep RL) · Planning &amp; Decision Making for Autonomous Robots · Mobile Health Monitoring</li>
           <li>Microrobotics · Nanorobotics · Biomedical Imaging · X-ray Techniques · Technology Entrepreneurship</li>
         </ul>
       </details>
@@ -123,10 +123,22 @@
         <p class="chips"><i>Computer vision</i><i>Biomechanics</i><i>Python</i></p>
       </article>
       <article class="card">
-        <span class="tag" style="--c:#5856d6">Robotics · 2025</span>
-        <h3>Planning &amp; decision making</h3>
-        <p>Group projects in motion planning and decision making for autonomous robots, from path planning to multi-agent decisions.</p>
-        <p class="chips"><i>Motion planning</i><i>Python</i><i>Git</i></p>
+        <span class="tag" style="--c:#ff3b30">Robot learning · 2026</span>
+        <h3>Deep RL for a walking biped</h3>
+        <p>Trained a 12-DoF biped robot with PPO in Isaac Gym to imitate a walking motion: reward design, phase variable, deployment-ready observations and domain randomisation (friction, mass, pushes), then transferred the policy Sim2Sim to MuJoCo.</p>
+        <p class="chips"><i>RL · PPO</i><i>Isaac Gym</i><i>MuJoCo</i><i>Sim2Sim</i></p>
+      </article>
+      <article class="card">
+        <span class="tag" style="--c:#5ac8fa">Legged robots · 2026</span>
+        <h3>Locomotion &amp; trajectory optimisation</h3>
+        <p>Kinematic walking controllers for quadruped and hexapod robots (trajectory planning and inverse kinematics), and trajectory optimisation for a biped from inverted-pendulum to single-rigid-body models, walking and jumping.</p>
+        <p class="chips"><i>C++</i><i>Inverse kinematics</i><i>LIP · SRB</i><i>MuJoCo</i></p>
+      </article>
+      <article class="card">
+        <span class="tag" style="--c:#5856d6">Motion planning · 2025</span>
+        <h3>Spacecraft trajectory optimisation</h3>
+        <p>Cost-function-based trajectory planning for a spacecraft among planets using successive convexification (SCvx), with collision-avoidance constraints. Plus multi-robot planning with A* and decision making with MDPs.</p>
+        <p class="chips"><i>SCvx</i><i>CVXPY</i><i>A*</i><i>MDPs</i></p>
       </article>
       <article class="card">
         <span class="tag" style="--c:#34c759">Product development · 2025</span>
@@ -153,6 +165,12 @@
         <p class="chips"><i>Deep learning</i><i>Computer vision</i><i>Python</i></p>
       </article>
       <article class="card">
+        <span class="tag" style="--c:#64d2ff">Web · 2026</span>
+        <h3>Interactive study guide</h3>
+        <p>Built a React web app as an interactive study guide for the Computational Models of Motion course, covering lectures from kinematics to reinforcement learning.</p>
+        <p class="chips"><i>React</i><i>Vite</i><i>JavaScript</i></p>
+      </article>
+      <article class="card">
         <span class="tag" style="--c:#a2845e">Innovation project · 2022–23</span>
         <h3>Autonomous sorting robot</h3>
         <p>Built and programmed an autonomous line-following “garbage truck” that identifies and sorts waste.</p>
@@ -165,11 +183,13 @@
   <section id="skills">
     <h2 class="group-title">Skills</h2>
     <div class="group skills">
-      <div class="skill-row"><h3>Robotics &amp; control</h3><p class="chips"><i>Control systems</i><i>Motion planning</i><i>Decision making</i><i>Computer vision</i><i>Motion tracking</i><i>Mechatronics</i><i>Arduino</i></p></div>
+      <div class="skill-row"><h3>Robot learning &amp; simulation</h3><p class="chips"><i>Reinforcement learning (PPO)</i><i>Reward design</i><i>Motion imitation</i><i>Domain randomisation</i><i>Sim2Sim transfer</i><i>MuJoCo</i><i>Isaac Gym</i><i>Cloud GPU training (AWS)</i></p></div>
+      <div class="skill-row"><h3>Planning &amp; optimisation</h3><p class="chips"><i>Cost-function-based path planning</i><i>Trajectory optimisation</i><i>Successive convexification (SCvx)</i><i>Convex optimisation (CVXPY)</i><i>Graph search (A*)</i><i>MDPs · value &amp; policy iteration</i><i>Collision checking</i><i>Multi-robot planning</i></p></div>
+      <div class="skill-row"><h3>Robotics &amp; control</h3><p class="chips"><i>Legged locomotion</i><i>Kinematics &amp; inverse kinematics</i><i>Jacobians</i><i>Inverted-pendulum models (LIP, VHIP)</i><i>Single-rigid-body dynamics</i><i>PD control</i><i>Control systems</i><i>Computer vision</i><i>Motion tracking</i><i>Mechatronics</i><i>Arduino</i></p></div>
       <div class="skill-row"><h3>Biomedical</h3><p class="chips"><i>Bioprinting</i><i>Tissue engineering</i><i>Bioink formulation</i><i>SEM</i><i>Mechanical benchmarking</i><i>Mobile health monitoring</i><i>Biomedical imaging</i></p></div>
       <div class="skill-row"><h3>Mechanical engineering</h3><p class="chips"><i>FEA / FEM</i><i>Structural mechanics</i><i>Thermodynamics</i><i>GD&amp;T</i><i>Mechanism design</i><i>Composite manufacturing</i><i>Prototyping</i><i>3D printing</i><i>Lab testing</i></p></div>
       <div class="skill-row"><h3>CAD</h3><p class="chips"><i>Siemens NX</i><i>CATIA</i><i>Fusion 360</i></p></div>
-      <div class="skill-row"><h3>Software</h3><p class="chips"><i>Python</i><i>NumPy / SciPy / pandas</i><i>MATLAB</i><i>C++</i><i>Deep learning</i><i>Git &amp; GitHub</i><i>LaTeX</i><i>HTML / CSS</i></p></div>
+      <div class="skill-row"><h3>Software</h3><p class="chips"><i>Python</i><i>NumPy / SciPy / pandas</i><i>PyTorch</i><i>C++</i><i>MATLAB</i><i>Deep learning</i><i>Git &amp; GitHub</i><i>Linux &amp; SSH</i><i>LaTeX</i><i>HTML / CSS</i><i>React (basics)</i></p></div>
       <div class="skill-row"><h3>Languages</h3><p class="chips"><i>German · native</i><i>English · C1</i><i>French · B2</i></p></div>
     </div>
   </section>
