@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Basic page setup: character set, mobile scaling, title shown in the browser tab -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Guy Bodmer</title>
+  <meta name="description" content="Guy Bodmer – mechanical engineer (ETH Zürich) focused on robotics and biomedical engineering.">
+  <!-- All styling lives in a separate file -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation bar at the top; each link jumps to a section further down (#id) -->
+  <header class="nav">
+    <a class="brand" href="#top">Guy Bodmer</a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#sport">Sport</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- Hero: the first thing visitors see -->
+    <section class="hero">
+      <p class="eyebrow">Mechanical Engineer · ETH Zürich</p>
+      <h1>Robotics &amp; biomedical engineering.</h1>
+      <p class="lead">
+        I design and build systems at the intersection of mechanics, control and the human body.
+        <!-- TODO: write one or two sentences in your own words -->
+      </p>
+      <div class="buttons">
+        <a class="btn primary" href="#projects">See my projects</a>
+        <a class="btn" href="#contact">Get in touch</a>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <h2>About</h2>
+      <div class="two-col">
+        <p>
+          I studied mechanical engineering at ETH Zürich with a focus on robotics and biomedical engineering.
+          <!-- TODO: add where you work / what you're doing now, if you want that public -->
+        </p>
+        <ul class="tags">
+          <li>Robotics</li>
+          <li>Control systems</li>
+          <li>Motion planning</li>
+          <li>Biomedical engineering</li>
+          <li>Mobile health</li>
+          <li>Python</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Projects: copy one <article class="card"> block to add another project -->
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Project title</h3>
+          <p>One or two sentences on what you built, how, and what came out of it.</p>
+          <p class="meta">Python · Robotics · 2026</p>
+        </article>
+        <article class="card">
+          <h3>Project title</h3>
+          <p>Describe a course project, your semester thesis or something you built for fun.</p>
+          <p class="meta">Topic · Tools · Year</p>
+        </article>
+        <article class="card">
+          <h3>Project title</h3>
+          <p>Link to code or a demo with an &lt;a href="..."&gt; link once it's online.</p>
+          <p class="meta">Topic · Tools · Year</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Sport -->
+    <section id="sport">
+      <h2>Outside the lab</h2>
+      <p>
+        Most of my free time I spend on the bike or running: long road rides around central Switzerland
+        and training for the next marathon.
+        <!-- TODO: adjust to what's true for you -->
+      </p>
+    </section>
+
+    <!-- Contact: replace the placeholders with what you want to make public -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>
+        <!-- TODO: add your public email and LinkedIn URL, e.g.
+             <a href="mailto:you@example.com">you@example.com</a> -->
+        <a href="https://github.com/gbodmer">GitHub</a> ·
+        <a href="#">LinkedIn</a> ·
+        <a href="#">Email</a>
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© <span id="year">2026</span> Guy Bodmer · Built with plain HTML &amp; CSS, hosted on GitHub Pages</p>
+  </footer>
+
+  <!-- A tiny bit of JavaScript: keeps the year in the footer current -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
