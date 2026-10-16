@@ -155,6 +155,9 @@ h3 { font-size: 17px; font-weight: 600; margin: 0; }
 .highlight p { margin: 0; font-size: 15px; color: #1d1d1fcc; }
 .highlight .tag { --c: #1d1d1f; }
 .rings { margin-bottom: 12px; }
+.highlight.rc { background: linear-gradient(135deg, #5ac8fa 0%, #007aff 100%); color: #fff; box-shadow: 0 10px 30px rgba(0, 122, 255, .25); }
+.highlight.rc p { color: #ffffffd9; }
+.highlight.rc .tag { --c: #ffffff; }
 
 /* ---------- Footer ---------- */
 footer { text-align: center; color: var(--label3); font-size: 13px; padding: 40px 0 0; }
