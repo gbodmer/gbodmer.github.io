@@ -128,9 +128,11 @@ h3 { font-size: 17px; font-weight: 600; margin: 0; }
 
 /* ---------- Project cards ---------- */
 .cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
-.card { background: var(--card); border-radius: 16px; box-shadow: var(--shadow); padding: 16px 18px; display: flex; flex-direction: column; gap: 6px; }
+.card { position: relative; background: var(--card); border-radius: 16px; box-shadow: var(--shadow); padding: 16px 18px; display: flex; flex-direction: column; gap: 6px; }
 .card h3 { font-size: 19px; letter-spacing: -0.02em; }
 .card p { margin: 0; font-size: 15px; color: var(--label2); }
+.grade { position: absolute; top: 14px; right: 14px; min-width: 40px; text-align: center; font-size: 13px; font-weight: 700; font-variant-numeric: tabular-nums; color: #fff; background: var(--blue); padding: 3px 9px; border-radius: 999px; }
+.grade::before { content: "Grade "; font-weight: 500; opacity: .85; }
 .tag { align-self: flex-start; font-size: 12px; font-weight: 600; color: var(--c); background: color-mix(in srgb, var(--c) 14%, transparent); padding: 3px 9px; border-radius: 999px; }
 
 /* chips (skills, tools) */
