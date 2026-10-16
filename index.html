@@ -1,115 +1,222 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <!-- Basic page setup: character set, mobile scaling, title shown in the browser tab -->
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Guy Bodmer</title>
-  <meta name="description" content="Guy Bodmer – mechanical engineer (ETH Zürich) focused on robotics and biomedical engineering.">
-  <!-- All styling lives in a separate file -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Guy Bodmer · Robotics &amp; Biomedical Engineer</title>
+  <meta name="description" content="Guy Bodmer – mechanical engineer (MSc, ETH Zürich) in robotics and biomedical engineering, intern at Voliro. Cyclist and marathon runner.">
+  <meta name="theme-color" content="#f2f2f7" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+  <meta property="og:title" content="Guy Bodmer">
+  <meta property="og:description" content="Robotics & biomedical engineer · ETH Zürich · Voliro">
+  <meta property="og:image" content="img/guy.jpg">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23007aff'/%3E%3Ctext x='32' y='43' font-family='-apple-system,Helvetica,Arial' font-size='30' font-weight='700' fill='white' text-anchor='middle'%3EGB%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Navigation bar at the top; each link jumps to a section further down (#id) -->
-  <header class="nav">
-    <a class="brand" href="#top">Guy Bodmer</a>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#sport">Sport</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+<!-- ============ Top bar (desktop) ============ -->
+<header class="topbar">
+  <a class="tb-name" href="#top">Guy Bodmer</a>
+  <nav aria-label="Sections">
+    <a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#sport">Sport</a>
+  </nav>
+</header>
 
-  <main id="top">
+<main id="top">
 
-    <!-- Hero: the first thing visitors see -->
-    <section class="hero">
-      <p class="eyebrow">Mechanical Engineer · ETH Zürich</p>
-      <h1>Robotics &amp; biomedical engineering.</h1>
-      <p class="lead">
-        I design and build systems at the intersection of mechanics, control and the human body.
-        <!-- TODO: write one or two sentences in your own words -->
-      </p>
-      <div class="buttons">
-        <a class="btn primary" href="#projects">See my projects</a>
-        <a class="btn" href="#contact">Get in touch</a>
-      </div>
-    </section>
+  <!-- ============ Profile card (like an iOS contact) ============ -->
+  <section class="profile">
+    <img class="avatar" src="img/guy.jpg" width="128" height="128" alt="Portrait of Guy Bodmer">
+    <h1>Guy Bodmer</h1>
+    <p class="role">Robotics &amp; Biomedical Engineer</p>
+    <p class="sub">Intern at <b>Voliro</b> · MSc Mechanical Engineering, <b>ETH Zürich</b></p>
+    <p class="loc"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"/></svg>Zürich, Switzerland</p>
 
-    <!-- About -->
-    <section id="about">
-      <h2>About</h2>
-      <div class="two-col">
-        <p>
-          I studied mechanical engineering at ETH Zürich with a focus on robotics and biomedical engineering.
-          <!-- TODO: add where you work / what you're doing now, if you want that public -->
-        </p>
-        <ul class="tags">
-          <li>Robotics</li>
-          <li>Control systems</li>
-          <li>Motion planning</li>
-          <li>Biomedical engineering</li>
-          <li>Mobile health</li>
-          <li>Python</li>
+    <div class="actions">
+      <a class="action" href="https://www.linkedin.com/in/guy-bodmer" target="_blank" rel="noopener">
+        <span class="ic" style="--c:#0a66c2"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.75h4v11H3v-11Zm6.5 0h3.8v1.5h.06c.53-1 1.83-1.8 3.76-1.8 4 0 4.88 2.4 4.88 5.6v5.7h-4v-5.05c0-1.2 0-2.75-1.7-2.75-1.72 0-1.98 1.3-1.98 2.65v5.15h-4v-11Z"/></svg></span>
+        <span>LinkedIn</span></a>
+      <!-- TODO: replace with your Strava profile link, e.g. https://www.strava.com/athletes/12345678 -->
+      <a class="action" href="https://www.strava.com/" target="_blank" rel="noopener">
+        <span class="ic" style="--c:#fc4c02"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.4 17.9 13.3 13.7h-3.1L15.4 24l5.1-10.3h-3.1ZM10.2 0 3.3 13.7h4.1l2.8-5.5 2.8 5.5h4.1Z"/></svg></span>
+        <span>Strava</span></a>
+      <a class="action" href="https://github.com/gbodmer" target="_blank" rel="noopener">
+        <span class="ic" style="--c:#1d1d1f"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.4-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg></span>
+        <span>GitHub</span></a>
+    </div>
+  </section>
+
+  <!-- ============ About ============ -->
+  <section id="about">
+    <h2 class="group-title">About</h2>
+    <div class="group pad">
+      <p>Mechanical engineer from ETH Zürich, focused on <b>robotics</b> and <b>biomedical engineering</b>. I like the part where theory meets the workshop: from carbon-fibre wing spars and precision mechanisms to bioprinting nozzles and computer-vision motion tracking.</p>
+      <p>Today I work at <b>Voliro</b>, an ETH spin-off building aerial robots that inspect industrial infrastructure by touching it. Outside work I'm usually on a road bike or training for the next long run.</p>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><span class="num">5.75</span><span class="lbl">Semester thesis grade</span></div>
+      <div class="stat"><span class="num">5.5</span><span class="lbl">Bachelor thesis grade</span></div>
+      <div class="stat"><span class="num">3</span><span class="lbl">Languages</span></div>
+      <div class="stat"><span class="num">127</span><span class="lbl">Trains in the MARTA metro project I designed components for</span></div>
+    </div>
+  </section>
+
+  <!-- ============ Experience ============ -->
+  <section id="experience">
+    <h2 class="group-title">Experience</h2>
+    <div class="group list">
+      <details class="row" open>
+        <summary><span class="sq" style="--c:#007aff">V</span><span class="txt"><b>Voliro</b><small>Intern · Zürich</small></span><span class="val">Since Sep 2026</span></summary>
+        <ul><li>ETH spin-off (Autonomous Systems Lab) building omnidirectional drones with tiltable rotors for contact-based inspection of wind turbines, tanks and industrial structures.</li></ul>
+      </details>
+      <details class="row">
+        <summary><span class="sq" style="--c:#ff3b30">S</span><span class="txt"><b>Stadler US Inc.</b><small>Engineering Intern · Salt Lake City, USA</small></span><span class="val">Jan – Jul 2022</span></summary>
+        <ul>
+          <li>Supported the <b>SBCTA hydrogen train</b> project (world record holder): technical documentation and engineering modifications.</li>
+          <li>Designed components in <b>CATIA</b> and <b>Siemens NX</b> for the <b>MARTA metro</b> project (127 trains).</li>
+          <li>Managed compliance documentation for the <b>Caltrain</b> double-decker project.</li>
+          <li>Mechanical assembly of a complete wagon, from design to manufacturing.</li>
         </ul>
+      </details>
+      <details class="row">
+        <summary><span class="sq" style="--c:#34c759">O</span><span class="txt"><b>Ochsner Sport</b><small>Sales Assistant, part-time · Switzerland</small></span><span class="val">Since 2024</span></summary>
+        <ul><li>Technical advice on sports equipment, especially running and cycling.</li></ul>
+      </details>
+    </div>
+
+    <h2 class="group-title">Education</h2>
+    <div class="group list">
+      <details class="row" open>
+        <summary><span class="sq" style="--c:#1f407a">ETH</span><span class="txt"><b>MSc Mechanical Engineering</b><small>ETH Zürich · Robotics &amp; Biomedical Engineering</small></span><span class="val">Since 2025</span></summary>
+        <ul>
+          <li>Computational Models of Motion · Planning &amp; Decision Making for Autonomous Robots · Mobile Health Monitoring</li>
+          <li>Microrobotics · Nanorobotics · Biomedical Imaging · X-ray Techniques · Technology Entrepreneurship</li>
+        </ul>
+      </details>
+      <details class="row">
+        <summary><span class="sq" style="--c:#1f407a">ETH</span><span class="txt"><b>BSc Mechanical Engineering</b><small>ETH Zürich</small></span><span class="val">2022 – 2025</span></summary>
+        <ul><li>Bachelor thesis <b>“Markerless Motion Tracking”</b> at the Sensory-Motor Systems Lab (grade 5.5/6): validated computer-vision systems that analyse human movement without physical markers.</li></ul>
+      </details>
+      <details class="row">
+        <summary><span class="sq" style="--c:#8e8e93">KL</span><span class="txt"><b>Matura</b><small>Kantonsschule Limmattal · Mathematics &amp; Applied Physics</small></span><span class="val">2017 – 2021</span></summary>
+        <ul><li>Swiss Matura with a focus on mathematics and applied physics.</li></ul>
+      </details>
+    </div>
+  </section>
+
+  <!-- ============ Projects ============ -->
+  <section id="projects">
+    <h2 class="group-title">Projects</h2>
+    <div class="cards">
+      <article class="card">
+        <span class="tag" style="--c:#af52de">Semester thesis · 2026</span>
+        <h3>Cartilage bioprinting</h3>
+        <p>Developed a heatable passive mixing nozzle for in-situ bioprinting of cartilage at the Ingenuity Lab, formulated several bioinks and validated them against native tissue. Grade 5.75/6.</p>
+        <p class="chips"><i>Bioprinting</i><i>Tissue engineering</i><i>SEM</i><i>CAD</i></p>
+      </article>
+      <article class="card">
+        <span class="tag" style="--c:#007aff">Bachelor thesis · 2025</span>
+        <h3>Markerless motion tracking</h3>
+        <p>Investigated and validated computer-vision tracking systems that analyse human movement without physical markers, at the Sensory-Motor Systems Lab. Grade 5.5/6.</p>
+        <p class="chips"><i>Computer vision</i><i>Biomechanics</i><i>Python</i></p>
+      </article>
+      <article class="card">
+        <span class="tag" style="--c:#5856d6">Robotics · 2025</span>
+        <h3>Planning &amp; decision making</h3>
+        <p>Group projects in motion planning and decision making for autonomous robots, from path planning to multi-agent decisions.</p>
+        <p class="chips"><i>Motion planning</i><i>Python</i><i>Git</i></p>
+      </article>
+      <article class="card">
+        <span class="tag" style="--c:#34c759">Product development · 2025</span>
+        <h3>Precision seeder</h3>
+        <p>Designed and built a robust, low-cost precision seeder for low-infrastructure regions, using off-the-shelf parts for easy maintenance.</p>
+        <p class="chips"><i>User-centred design</i><i>Prototyping</i><i>3D printing</i></p>
+      </article>
+      <article class="card">
+        <span class="tag" style="--c:#ff9500">Structures lab · 2024</span>
+        <h3>Carbon-fibre wing spar</h3>
+        <p>Optimised a thermoplastic carbon-fibre aircraft wing spar for weight and bending load to failure, then manufactured it and tested it to destruction.</p>
+        <p class="chips"><i>FEM</i><i>Composites</i><i>Testing</i></p>
+      </article>
+      <article class="card">
+        <span class="tag" style="--c:#ff2d55">CAD lab · 2024</span>
+        <h3>High-precision ratchet</h3>
+        <p>Designed and validated a ratcheting wrench with a smaller swing angle than market standards.</p>
+        <p class="chips"><i>Siemens NX</i><i>FEA</i><i>Mechanism design</i></p>
+      </article>
+      <article class="card">
+        <span class="tag" style="--c:#00c7be">Machine learning · 2023</span>
+        <h3>U-Net feature recognition</h3>
+        <p>Programmed and trained a U-Net neural network to recognise specific objects in image datasets.</p>
+        <p class="chips"><i>Deep learning</i><i>Computer vision</i><i>Python</i></p>
+      </article>
+      <article class="card">
+        <span class="tag" style="--c:#a2845e">Innovation project · 2022–23</span>
+        <h3>Autonomous sorting robot</h3>
+        <p>Built and programmed an autonomous line-following “garbage truck” that identifies and sorts waste.</p>
+        <p class="chips"><i>Mechatronics</i><i>Arduino / C++</i><i>3D printing</i></p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ Skills ============ -->
+  <section id="skills">
+    <h2 class="group-title">Skills</h2>
+    <div class="group skills">
+      <div class="skill-row"><h3>Robotics &amp; control</h3><p class="chips"><i>Control systems</i><i>Motion planning</i><i>Decision making</i><i>Computer vision</i><i>Motion tracking</i><i>Mechatronics</i><i>Arduino</i></p></div>
+      <div class="skill-row"><h3>Biomedical</h3><p class="chips"><i>Bioprinting</i><i>Tissue engineering</i><i>Bioink formulation</i><i>SEM</i><i>Mechanical benchmarking</i><i>Mobile health monitoring</i><i>Biomedical imaging</i></p></div>
+      <div class="skill-row"><h3>Mechanical engineering</h3><p class="chips"><i>FEA / FEM</i><i>Structural mechanics</i><i>Thermodynamics</i><i>GD&amp;T</i><i>Mechanism design</i><i>Composite manufacturing</i><i>Prototyping</i><i>3D printing</i><i>Lab testing</i></p></div>
+      <div class="skill-row"><h3>CAD</h3><p class="chips"><i>Siemens NX</i><i>CATIA</i><i>Fusion 360</i></p></div>
+      <div class="skill-row"><h3>Software</h3><p class="chips"><i>Python</i><i>NumPy / SciPy / pandas</i><i>MATLAB</i><i>C++</i><i>Deep learning</i><i>Git &amp; GitHub</i><i>LaTeX</i><i>HTML / CSS</i></p></div>
+      <div class="skill-row"><h3>Languages</h3><p class="chips"><i>German · native</i><i>English · C1</i><i>French · B2</i></p></div>
+    </div>
+  </section>
+
+  <!-- ============ Sport ============ -->
+  <section id="sport">
+    <h2 class="group-title">Sport</h2>
+    <div class="highlight">
+      <div class="medal" aria-hidden="true">🏅</div>
+      <div>
+        <span class="tag" style="--c:#ffcc00">2026</span>
+        <h3>Alpenbrevet Gold</h3>
+        <p>Finished the Gold route of the Alpenbrevet, one of the classic Swiss alpine road-cycling challenges over several passes in a single day.</p>
       </div>
-    </section>
+    </div>
+    <div class="stats rings">
+      <div class="stat"><span class="num" style="--c:#ff9500">5,000<small>km</small></span><span class="lbl">Cycled in 2026</span></div>
+      <div class="stat"><span class="num" style="--c:#34c759">800<small>km</small></span><span class="lbl">Run in 2026</span></div>
+      <div class="stat"><span class="num" style="--c:#ff2d55">53.9<small>km</small></span><span class="lbl">Longest run (ultra)</span></div>
+      <div class="stat"><span class="num" style="--c:#007aff">2</span><span class="lbl">Marathons</span></div>
+    </div>
+    <div class="group pad">
+      <p>Road cycling, marathon and ultra running, climbing and skiing. And a soft spot for automotive engineering. Training data from Strava.</p>
+    </div>
+  </section>
 
-    <!-- Projects: copy one <article class="card"> block to add another project -->
-    <section id="projects">
-      <h2>Projects</h2>
-      <div class="cards">
-        <article class="card">
-          <h3>Project title</h3>
-          <p>One or two sentences on what you built, how, and what came out of it.</p>
-          <p class="meta">Python · Robotics · 2026</p>
-        </article>
-        <article class="card">
-          <h3>Project title</h3>
-          <p>Describe a course project, your semester thesis or something you built for fun.</p>
-          <p class="meta">Topic · Tools · Year</p>
-        </article>
-        <article class="card">
-          <h3>Project title</h3>
-          <p>Link to code or a demo with an &lt;a href="..."&gt; link once it's online.</p>
-          <p class="meta">Topic · Tools · Year</p>
-        </article>
-      </div>
-    </section>
+  <footer>© <span id="y">2026</span> Guy Bodmer · Plain HTML &amp; CSS on GitHub Pages</footer>
+</main>
 
-    <!-- Sport -->
-    <section id="sport">
-      <h2>Outside the lab</h2>
-      <p>
-        Most of my free time I spend on the bike or running: long road rides around central Switzerland
-        and training for the next marathon.
-        <!-- TODO: adjust to what's true for you -->
-      </p>
-    </section>
+<!-- ============ Tab bar (phones) ============ -->
+<nav class="tabbar" aria-label="Sections">
+  <a href="#top"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2c-4.4 0-8 2.2-8 5v1h16v-1c0-2.8-3.6-5-8-5Z"/></svg>Profile</a>
+  <a href="#experience"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6a2 2 0 0 1 2 2v1h3a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h3V5a2 2 0 0 1 2-2Zm0 3h6V5H9v1Z"/></svg>Career</a>
+  <a href="#projects"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h7v7H4V4Zm9 0h7v7h-7V4ZM4 13h7v7H4v-7Zm9 0h7v7h-7v-7Z"/></svg>Projects</a>
+  <a href="#skills"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 2.9 6.6 7.1.6-5.4 4.7 1.6 7L12 17.3 5.8 21l1.6-7L2 9.2l7.1-.6L12 2Z"/></svg>Skills</a>
+  <a href="#sport"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 21a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9Zm13 0a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9ZM15 4a2 2 0 1 1 0 4 2 2 0 0 1 0-4Zm-3.2 4.5 2.7 2.4h3.2v1.8h-4l-2-1.7-1.8 1.9 2.4 2V20h-1.8v-4.3l-3-2.6a1.3 1.3 0 0 1 0-1.9l3.2-2.7a1 1 0 0 1 1.1 0Z"/></svg>Sport</a>
+</nav>
 
-    <!-- Contact: replace the placeholders with what you want to make public -->
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>
-        <!-- TODO: add your public email and LinkedIn URL, e.g.
-             <a href="mailto:you@example.com">you@example.com</a> -->
-        <a href="https://github.com/gbodmer">GitHub</a> ·
-        <a href="#">LinkedIn</a> ·
-        <a href="#">Email</a>
-      </p>
-    </section>
-
-  </main>
-
-  <footer>
-    <p>© <span id="year">2026</span> Guy Bodmer · Built with plain HTML &amp; CSS, hosted on GitHub Pages</p>
-  </footer>
-
-  <!-- A tiny bit of JavaScript: keeps the year in the footer current -->
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+<script>
+  // keep the footer year current, and highlight the tab of the section in view
+  document.getElementById('y').textContent = new Date().getFullYear();
+  const tabs = [...document.querySelectorAll('.tabbar a, .topbar nav a')];
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    if (!e.isIntersecting) return;
+    tabs.forEach(t => t.classList.toggle('on', t.getAttribute('href') === '#' + e.target.id));
+  }), { rootMargin: '-45% 0px -50% 0px' });
+  document.querySelectorAll('main > section[id], main#top').forEach(s => io.observe(s));
+</script>
 </body>
 </html>
