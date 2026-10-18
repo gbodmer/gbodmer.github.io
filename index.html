@@ -146,7 +146,7 @@
         <p class="chips"><i>C++</i><i>Inverse kinematics</i><i>LIP · SRB</i><i>MuJoCo</i></p>
       </article>
       <article class="card has-media">
-        <figure class="media"><img src="media/pathplanning.jpg" width="616" height="600" alt="Multi-robot path planning simulation with robots, obstacles and goals" loading="lazy" decoding="async"></figure>
+        <figure class="media"><video src="media/pathplanning.mp4" poster="media/pathplanning.jpg" muted loop playsinline preload="none" aria-label="Multi-robot path planning simulation with robots, obstacles and goals"></video></figure>
         <span class="tag" style="--c:#5856d6">Motion planning · 2025</span>
         <h3>Spacecraft trajectory optimisation</h3><span class="grade" title="ETH grade (scale 1–6, 6 = best)">5.75</span>
         <p>Cost-function-based trajectory planning for a spacecraft among planets using successive convexification (SCvx), with collision-avoidance constraints. Plus multi-robot planning with A* and decision making with MDPs.</p>
@@ -230,14 +230,14 @@
     <h2 class="group-title">Sport</h2>
     <div class="gallery">
       <figure><img src="media/sport/stelvio.jpg" width="676" height="900" alt="Cycling on top of the Passo dello Stelvio" loading="lazy" decoding="async"><figcaption>Passo dello Stelvio, 2758 m</figcaption></figure>
-      <figure><img style="object-position: 50% 12%" src="media/sport/running.jpg" width="520" height="900" alt="Running a marathon" loading="lazy" decoding="async"><figcaption>Marathon day</figcaption></figure>
+      <figure><img style="object-position: 50% 10%" src="media/sport/running.jpg" width="798" height="900" alt="Running a marathon with a friend" loading="lazy" decoding="async"><figcaption>Marathon day</figcaption></figure>
       <figure><img src="media/sport/boulder.jpg" width="628" height="900" alt="Bouldering on a rock outdoors" loading="lazy" decoding="async"><figcaption>Bouldering</figcaption></figure>
-      <figure><img src="media/sport/ski-carve.jpg" width="1070" height="600" alt="Skiing below a gondola" loading="lazy" decoding="async"><figcaption>Carving</figcaption></figure>
+      <figure><video src="media/sport/ski-carve.mp4" poster="media/sport/ski-carve.jpg" muted loop playsinline preload="none" aria-label="Skiing below a gondola"></video><figcaption>Carving</figcaption></figure>
       <figure><img src="media/sport/river.jpg" width="676" height="900" alt="Road bike break next to a turquoise river" loading="lazy" decoding="async"><figcaption>Alpine rides</figcaption></figure>
-      <figure><img src="media/sport/multipitch.jpg" width="506" height="900" alt="View down a multi-pitch climbing route" loading="lazy" decoding="async"><figcaption>Multi-pitch climbing</figcaption></figure>
-      <figure><img src="media/sport/ski-mountain.jpg" width="504" height="900" alt="Skiing in the mountains" loading="lazy" decoding="async"><figcaption>Back on the slopes</figcaption></figure>
+      <figure><video src="media/sport/multipitch.mp4" poster="media/sport/multipitch.jpg" muted loop playsinline preload="none" aria-label="View down a multi-pitch climbing route"></video><figcaption>Multi-pitch climbing</figcaption></figure>
+      <figure><video src="media/sport/ski-mountain.mp4" poster="media/sport/ski-mountain.jpg" muted loop playsinline preload="none" aria-label="Skiing in the mountains"></video><figcaption>Back on the slopes</figcaption></figure>
       <figure><img src="media/sport/village.jpg" width="506" height="900" alt="Riding through a mountain village" loading="lazy" decoding="async"><figcaption>Through mountain villages</figcaption></figure>
-      <figure><img src="media/sport/ski-sun.jpg" width="504" height="900" alt="Skier on a sunny slope" loading="lazy" decoding="async"><figcaption>Winter light</figcaption></figure>
+      <figure><video src="media/sport/ski-sun.mp4" poster="media/sport/ski-sun.jpg" muted loop playsinline preload="none" aria-label="Skier on a sunny slope"></video><figcaption>Winter light</figcaption></figure>
     </div>
     <div class="stats rings">
       <div class="stat"><span class="num" style="--c:#ff9500">5,000<small>km</small></span><span class="lbl">Cycled in 2026</span></div>
@@ -313,7 +313,7 @@
   document.querySelectorAll('main > section[id], main#top').forEach(s => io.observe(s));
   // project videos: load and play only while on screen
   const vo = new IntersectionObserver(es => es.forEach(e => e.isIntersecting ? e.target.play().catch(() => {}) : e.target.pause()), { threshold: .4 });
-  document.querySelectorAll('.media video').forEach(v => vo.observe(v));
+  document.querySelectorAll('.media video, .gallery video').forEach(v => vo.observe(v));
 </script>
 </body>
 </html>
