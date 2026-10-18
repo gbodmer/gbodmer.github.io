@@ -205,11 +205,11 @@ div.row + div.row summary { border-top: .5px solid var(--sep); }
 .worldmap path.been { fill: var(--blue); }
 .worldmap path.been:hover { fill: color-mix(in srgb, var(--blue) 75%, #fff); }
 .worldmap path.home { fill: #34c759; }
-.worldmap .pin circle { fill: #ff9500; stroke: var(--card); stroke-width: 1.5; }
-.worldmap .pin .halo { fill: #ff9500; opacity: .25; stroke: none; }
+.worldmap .pin circle { fill: var(--blue); stroke: var(--card); stroke-width: 1.2; }
+.worldmap .pin .halo { fill: var(--blue); opacity: .25; stroke: none; }
 .travel-legend { display: flex; flex-wrap: wrap; gap: 6px 16px; align-items: center; font-size: 13px; color: var(--label2); margin: 10px 4px 2px; }
 .travel-legend .lg { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; }
-.lg.been { background: var(--blue); } .lg.home { background: #34c759; } .lg.pin { background: #ff9500; border-radius: 50%; }
+.lg.been { background: var(--blue); } .lg.home { background: #34c759; }
 .travel-legend .count { margin-left: auto; font-weight: 600; color: var(--label); }
 .travel .chips { margin: 8px 4px 0 !important; }
 
